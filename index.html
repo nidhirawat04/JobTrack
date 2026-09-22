@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section id="navbar">
+            <h1>JobTrack</h1>
+            <button id="add-application">+ Add Application</button>
+        </section>
+    </header>
+
+    <main>
+        <section id="stats">
+            <div class="stats-card">
+                <h2>Applications</h2>
+                <h2 id="application-count">0</h2>
+            </div>
+            <div class="stats-card">
+                <h2>Interviews</h2>
+                <h2 id = "interview-count">0</h2>
+            </div>
+            <div class="stats-card">
+                <h2>Offers</h2>
+                <h2 id = "offer-count">0</h2>
+            </div>
+        </section>
+
+        <section id="second-para">
+        <section id="application-filter">
+            <input id="search-input" type="text" placeholder="Search applications...">
+
+            <select id="status-filter">
+                <option value="">Status</option>
+                <option value="all">All</option>
+                <option value="applied">Applied</option>
+                <option value="interview">Interview</option>
+                <option value="offer">Offer</option>
+                <option value="rejected">Rejected</option>
+            </select>
+        </section>
+
+        <section>
+            <div id="table-container">
+            <table id="application-table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Job url</th>
+                        <th>Notes</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="application-list">
+                    
+                </tbody>
+
+            </table>
+
+            <button id="edit-btn">Edit Changes</button>
+            </div>
+
+        </section>
+    </section>
+
+    <section id="application-open">
+        <div id="entry-heading">
+            <h3>Add Application</h3>
+            <button id="close-form">x</button>
+        </div>
+
+        <div id="job-entry">
+            <div class="entry">
+                <label for="company-name" required>Company Name</label>
+                <input id="company-name" type="text">
+            </div>
+
+            <div class="entry">
+            <label for="job-role" required>Job Role</label>
+                <input id="job-role" type="text">
+            </div>
+
+            <div class="entry">
+                <label for="status">Status</label>
+                    <select id="status">
+                        <option value="">Status</option>
+                        <option value="all">All</option>
+                        <option value="applied">Applied</option>
+                        <option value="interview">Interview</option>
+                        <option value="offer">Offer</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+            </div>
+
+            <div class="entry">
+                <label for="date">Application Date</label>
+                    <input type="date" id="date">
+            </div>
+
+            <div class="entry">
+                <label for="url">Application link</label>
+                    <input id="url" type="url">
+            </div>
+
+            <div class="entry">
+                <label for="notes">Notes</label>
+                    <textarea id="notes" rows="4" cols="30"></textarea>
+            </div>
+        </div>
+
+        <button id="save-application">Save Application</button>
+    </section>
+    </main>
+
+    <footer>
+        <p id ="footer">@2026 JobTrack<p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
