@@ -15,7 +15,14 @@ body{
 
 }
 
-
+#error-msg{
+    display: none;
+    background-color:#790509;
+    margin:40px;
+    color:#f9e9b9;
+    padding:2px;
+    text-align:center;
+}
 
 header{
     position: sticky;
