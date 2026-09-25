@@ -73,7 +73,7 @@ button:active{
 #stats{
     display:flex;
     justify-content:center;
-    gap:50px;
+    gap:40px;
     padding:40px 30px;
     margin:30px;
 }
@@ -81,7 +81,7 @@ button:active{
 .stats-card{
     flex:1;
     max-width:300px;
-    padding:25px ;
+    padding:10px ;
     border:1px solid #790509;
     text-align:center;
     background-color: #eeebda;
@@ -96,12 +96,13 @@ button:active{
 }
 
 .stats-card h2:first-child{
-    font-size:25px;
+    font-size:clamp(18px, 2vw, 25px);;
     font-weight:550;
+    
 }
 
 .stats-card h2:last-child{
-    font-size:25px;
+    font-size: clamp(20px, 3vw, 32px);
     margin-top:8px;
 }
 
@@ -137,11 +138,11 @@ h3{
 
 #search-input{
     flex:1;
-    max-width:400px;
+    max-width:350px;
 }
 
 #status-filter{
-    min-width:150px;
+    min-width:100px;
 }
 
 #search-input:focus,
@@ -150,7 +151,7 @@ h3{
 }
 
 #table-container{
-    width:90%;
+    width:80%;
     margin:0 auto;
     overflow-x:auto;
 }
@@ -159,10 +160,11 @@ table{
     width:100%;
     border-collapse:collapse;
     background-color:#eeebda;
+    
 }
 
 th, td{
-    padding:12px;
+    padding:14px;
     border: 1px solid #790509;
     text-align:center;
 }
@@ -177,9 +179,9 @@ tbody tr:hover{
 }
 
 .delete-button{
-    padding:6px 12px;
+    padding:4px 10px;
     margin:0;
-    font-size:13px;
+    font-size:11px;
 }
 
 #edit-btn{
@@ -241,6 +243,9 @@ tbody tr:hover{
 #save-application{
     display:block;
     margin: 12px auto 15px;
+    font-size:14px;
+    padding:5px;
+    margin-bottom:40px;
 }
 
 #entry-heading{
@@ -258,7 +263,7 @@ tbody tr:hover{
 #close-form {
     position:absolute;
     right:10px;
-    top:12px;
+    top:9px;
     padding:2px 5px;
 }
 
@@ -287,13 +292,15 @@ tbody tr:hover{
     #stats{
         flex-direction:column;
         padding:20px;
-        margin:20px auto;
+        margin:auto;
         align-items: center;
+        gap:15px;
     }
 
     .stats-card{
-        width:40%;
-        max-width:none;
+        width:80%;
+        max-width:400px;
+        margin:9px;
     }
 
     #applications-section{
@@ -303,29 +310,41 @@ tbody tr:hover{
 
     #application-filter{
         flex-direction:row;
-        margin:20px;
-        padding:20px;
+        margin:10px;
+        padding:30px;
     }
 
     #search-input{
         max-width:none;
-        width:50%;
+        width:70%;
+        min-width:100px;
     }
 
-    #status-filter{
-        width:30%;
-    }
 
     #application-open{
-        width:calc(100% - 90px);
+        width:calc(100% - 70px);
         margin:40px auto;
     }
 
     #job-entry{
-        margin:20px;
+        margin:10px 20px;
+    }
+
+    th, td{
+    padding:8px;
+    }
+
+    #edit-btn{
+        padding:4px 7px;
+        margin:25px;
+        font-size:15px;
     }
 
     #footer{
         padding:30px 10px;
+    }
+
+    #save-application{
+        margin-top:20px;
     }
 }

@@ -186,7 +186,37 @@ function renderApplication(applicationObj){
 
 loadApplications();
 
-const searchInput = document.getElementById("search-input");
-searchInput.addEventListener("input", function(event){
-    console.log(event.target.value);
+  
+const searchInput= document.getElementById("search-input");
+const statusFilter = document.getElementById("status-filter");
+
+function filterApplications() {
+    const searchItem = searchInput.value.toLowerCase();
+    const statusItem = statusFilter.value.toLowerCase();
+    
+    const filteredApplications = applicationArray.filter(function(application){
+        return (
+            (application.role.toLowerCase().includes(searchItem) || 
+            application.company.toLowerCase().includes(searchItem)) 
+            && 
+            (statusItem === "all" || application.status.toLowerCase() === statusItem)
+        );
+    });
+
+    applicationList.innerHTML = "";
+    filteredApplications.forEach( function(application){
+        renderApplication(application);
+
+    });
+}  
+
+    searchInput.addEventListener("input", filterApplications);
+
+    statusFilter.addEventListener("change", filterApplications);
+
+
+const editButton = document.getElementById("edit-btn");
+
+editButton.addEventListener("click", function() {
+    console.log("Edit clicked");
 });
