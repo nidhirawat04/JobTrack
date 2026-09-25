@@ -1,13 +1,13 @@
 const addApplication = document.getElementById("add-application");
 const applicationOpen = document.getElementById("application-open");
 const stats = document.getElementById("stats");
-const secondPara = document.getElementById("second-para");
+const applicationSection = document.getElementById("application-section");
 
 addApplication.addEventListener("click", ()=>
 {
     applicationOpen.style.display= "block";
     stats.style.display= "none";
-    secondPara.style.display= "none";
+    applicationSection.style.display= "none";
 });
 
 const closeForm= document.getElementById("close-form");
@@ -16,7 +16,7 @@ closeForm.addEventListener("click", ()=>
 {
     applicationOpen.style.display= "none";
     stats.style.display= "flex";
-    secondPara.style.display= "block";
+    applicationSection.style.display= "block";
 });
 
 const companyName=  document.getElementById("company-name");
@@ -47,10 +47,11 @@ saveButton.addEventListener("click", () => {
     }
 
     errorMsg.textContent ="";
+    errorMsg.style.display = "none";
 
     applicationOpen.style.display= "none";
     stats.style.display= "flex";
-    secondPara.style.display= "block";
+    applicationSection.style.display= "block";
 
     let applicationObj={
     id:Date.now(),
@@ -185,3 +186,7 @@ function renderApplication(applicationObj){
 
 loadApplications();
 
+const searchInput = document.getElementById("search-input");
+searchInput.addEventListener("input", function(event){
+    console.log(event.target.value);
+});
