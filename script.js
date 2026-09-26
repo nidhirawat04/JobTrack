@@ -1,3 +1,5 @@
+const { isValidElement } = require("react");
+
 const addApplication = document.getElementById("add-application");
 const applicationOpen = document.getElementById("application-open");
 const stats = document.getElementById("stats");
@@ -217,6 +219,16 @@ function filterApplications() {
 
 const editButton = document.getElementById("edit-btn");
 
-editButton.addEventListener("click", function() {
-    console.log("Edit clicked");
+let isEditing = false;
+
+editButton.addEventListener("click", (event) =>{
+    if(isEditing){
+        isEditing.toggle;
+        companyCell = document.createElement("input");
+        renderApplication(application);
+    }
+
+    applicationArray.forEach(function(application){
+        renderApplication(application);
+    });
 });
