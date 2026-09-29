@@ -184,13 +184,6 @@ tbody tr:hover{
     font-size:11px;
 }
 
-#edit-btn{
-    display:flex;
-    justify-self: center;
-    margin:30px;
-    padding:7px 15px;
-}
-
 #application-open{
     border:2px solid #790509;
     margin:30px auto ;
